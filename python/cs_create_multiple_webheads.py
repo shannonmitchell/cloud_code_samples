@@ -22,9 +22,6 @@ import time
 import pyrax
 import argparse
 
-# Global Configuration: (Hard coded for example.  Would want this as
-# command line arguments in production)
-
 
 # Get the flavor id from the label
 def get_flavor_id(csobj, flavor_label):
@@ -123,13 +120,13 @@ def main():
         help='flavor id or name (default: 512MB Standard Instance)',
         default='512MB Standard Instance')
     parser.add_argument(
-        '--webhead_count', help='Number of webheads to create',
+        '--webhead_count', help='Number of webheads to create(default: 3)',
         default=3)
     parser.add_argument(
-        '--webhead_prefix', help='webhead prefix',
+        '--webhead_prefix', help='webhead prefix(default: web)',
         default='web')
     parser.add_argument(
-        '--region', help='Region', default='DFW')
+        '--region', help='Region(default: DFW)', default='DFW')
     args = parser.parse_args()
 
     # Set the region
