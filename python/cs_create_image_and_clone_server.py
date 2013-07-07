@@ -130,7 +130,7 @@ def main():
     # Parse the command line arguments
     parser = argparse.ArgumentParser(
         description="Image a server and create a clone from the image",
-        prog='cf_create_image_and_clone_server.py')
+        prog='cs_create_image_and_clone_server.py')
     parser.add_argument(
         '--region', help='Region(default: DFW)', default='DFW')
     parser.add_argument(
